@@ -1,5 +1,21 @@
 sudo: false
 language: ruby
-rvm:
-  - 2.3.1
-before_install: gem install bundler -v 1.12.5
+cache: bundler
+before_install:
+  - rvm get head
+  - gem update --system
+  - gem install bundler
+install:
+  - bundle install -j8 -r3
+script:
+  - if [[ "${STYLE}" = "true" ]]; then bundle exec rake reevoocop; fi;
+  - bundle exec rspec spec
+env: STYLE=false
+matrix:
+  fast_finish: true
+  include:
+  - rvm: 2.3.1
+    env: STYLE=true
+notifications:
+  slack:
+    secure: CshVvjmjiBVhLjkDsv/LtuXcF2HYngSdHEyDpmb2JDZrUZcNRGBAf4rZdkM+Z1+HmdJ95e0oVHRJX7dasAioUWdqGKsFQ2Rkc4iM0ocV6SLv2vt1Z/QJeAt6F5M/1Fn0RqXeMd4QbkRqF+xi5YMnzdNsyuyO2SrHZQRxg5SwYJNyPQsTnJgRePBz1Y7ilXirquGs4cXwjIfgeKhUGEWhx/Oiu5XH5lcQnxAh7LJW6zmnHFc29lHnzDpw+HQMLdrAH+15MyCu82ZxaWkNeUa2bl1IQg5p08RI9k7PK8SpgO34A5tkMmc1/wfW1ZsSjbltgJuJC8YJelqvNZvO5zBrNX/yNUEKBELz612bW1GVPGcMwhHUscwAK5WzUmVmGNktBEkm2YEjTbjvvnHtP6jNTHTpuwECySm2vrTym7xBNJFmv2bGZ5uNonhDfk68qu2Fx+qx819ZeDnngvmF2H4T0HrhVJ+WTn9eXMNcIxy2ZCwsqUiUIH6b3Ww5MagYc/lXpLtyEmtke15OwmP85wDLBeLfpW8Ox7oJFbj/WKP96BQo5XXoUSOUsrRv2eulM+Lh5YwQV3ka8lxrklZBC5qgPMdNXybN59GOwjCAHq7n9fr9XR0jPap99ZgeaVyAzTzfxWDFiSldU5ZXKehgE6XGGP3zuzu2LQsQ8dRy4yHm2c0=
