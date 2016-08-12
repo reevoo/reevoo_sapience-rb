@@ -1,8 +1,13 @@
 *.gem
 *.rbc
+/.bundle/
+/.yardoc
+/Gemfile.lock
 /.config
+/_yardoc/
 /coverage/
 /InstalledFiles
+/doc/
 /pkg/
 /spec/reports/
 /spec/examples.txt
@@ -17,6 +22,7 @@
 .dat*
 .repl_history
 build/
+spec/examples.txt
 *.bridgesupport
 build-iPhoneOS/
 build-iPhoneSimulator/

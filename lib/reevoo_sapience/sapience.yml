@@ -1,0 +1,25 @@
+---
+defaults: &defaults
+  appenders:
+    - file:
+        io: STDOUT
+        formatter: <%= ENV['SAPIENCE_FORMATTER'] %>
+    - statsd:
+        url: <%= ENV['STATSD_URL'] %>
+    - sentry:
+        dsn: <%= ENV['RAVEN_DSN'] %>
+
+test:
+  <<: *defaults
+
+development:
+  <<: *defaults
+
+production:
+  <<: *defaults
+
+integration:
+  <<: *defaults
+
+staging:
+  <<: *defaults
