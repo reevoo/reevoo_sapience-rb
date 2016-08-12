@@ -10,11 +10,11 @@ module ReevooSapience
   end
 
   def self.initialize_rails # rubocop:disable AbcSize
-    log_level    = ::Rails.application.config.log_level
-    application  = ::Rails.application.class.name
-    appenders    = config[::Rails.environment]["appenders"]
-
-    configure(log_level, application, appenders)
+    configure(
+      ::Rails.application.config.log_level,
+      ::Rails.application.class.parent_name.to_s,
+      config[::Rails.environment]["appenders"],
+    )
 
     ::Rails.logger = Sapience[::Rails]
     [:active_record, :action_controller, :action_mailer, :action_view].each do |name|
