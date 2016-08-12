@@ -11,9 +11,9 @@ module ReevooSapience
 
   def self.initialize_rails # rubocop:disable AbcSize
     configure(
-      ::Rails.application.config.log_level,
-      ::Rails.application.class.parent_name.to_s,
-      config[::Rails.environment]["appenders"],
+      log_level: ::Rails.application.config.log_level,
+      application: ::Rails.application.class.parent_name.to_s,
+      appenders: config[::Rails.environment]["appenders"],
     )
 
     ::Rails.logger = Sapience[::Rails]
@@ -35,7 +35,7 @@ module ReevooSapience
     @_config = YAML.load_file(File.expand_path("../reevoo_sapience/sapience.yml", __FILE__))
   end
 
-  def self.configure(log_level, application, appenders = [])
+  def self.configure(log_level:, application:, appenders: [])
     Sapience.configure do |c|
       c.default_level           = log_level
       c.default_backtrace_level = log_level
