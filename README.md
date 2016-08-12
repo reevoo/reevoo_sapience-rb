@@ -1,6 +1,6 @@
 # ReevooSapience::Rb
 
-[![Code Climate](https://codeclimate.com/github/reevoo/reevoo_sapience-rb/badges/gpa.svg)](https://codeclimate.com/github/reevoo/reevoo_sapience-rb)[![Test Coverage](https://codeclimate.com/github/reevoo/reevoo_sapience-rb/badges/coverage.svg)](https://codeclimate.com/github/reevoo/reevoo_sapience-rb/coverage)[![Issue Count](https://codeclimate.com/github/reevoo/reevoo_sapience-rb/badges/issue_count.svg)](https://codeclimate.com/github/reevoo/reevoo_sapience-rb)
+[![Build Status](https://travis-ci.org/reevoo/reevoo_sapience-rb.svg?branch=master)](https://travis-ci.org/reevoo/reevoo_sapience-rb)[![Code Climate](https://codeclimate.com/github/reevoo/reevoo_sapience-rb/badges/gpa.svg)](https://codeclimate.com/github/reevoo/reevoo_sapience-rb)[![Test Coverage](https://codeclimate.com/github/reevoo/reevoo_sapience-rb/badges/coverage.svg)](https://codeclimate.com/github/reevoo/reevoo_sapience-rb/coverage)[![Issue Count](https://codeclimate.com/github/reevoo/reevoo_sapience-rb/badges/issue_count.svg)](https://codeclimate.com/github/reevoo/reevoo_sapience-rb)
 
 ## Installation
 
