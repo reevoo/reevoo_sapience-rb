@@ -11,7 +11,4 @@ describe ReevooSapience do
 
   describe ".config" do
   end
-
-  context "description" do
-  end
 end

@@ -33,5 +33,9 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
   spec.add_development_dependency "rspec-its"
+  spec.add_development_dependency "pry-nav"
   spec.add_development_dependency "reevoocop"
+  spec.add_development_dependency "fuubar"
+  spec.add_development_dependency "simplecov"
+  spec.add_development_dependency "simplecov-json"
 end
