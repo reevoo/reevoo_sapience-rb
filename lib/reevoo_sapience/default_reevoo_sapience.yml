@@ -1,0 +1,34 @@
+---
+defaults: &defaults
+  appenders:
+    - file:
+        io: STDOUT
+        formatter: <%= ENV.fetch('SAPIENCE_FORMATTER') { 'json' } %>
+    - statsd:
+        url: <%= ENV.fetch('STATSD_URL') %>
+    - sentry:
+        dsn: <%= ENV.fetch('RAVEN_DSN') %>
+
+test:
+  appenders:
+    - file:
+        io: STDOUT
+        formatter: <%= ENV.fetch('SAPIENCE_FORMATTER') { 'color' } %>
+
+development:
+  appenders:
+    - file:
+        io: STDOUT
+        formatter: <%= ENV.fetch('SAPIENCE_FORMATTER') { 'color' } %>
+
+production:
+  <<: *defaults
+
+integration:
+  <<: *defaults
+
+staging:
+  <<: *defaults
+
+ci:
+  <<: *defaults
