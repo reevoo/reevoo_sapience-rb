@@ -15,7 +15,7 @@ module ReevooSapience
       configure(
         log_level: ::Rails.application.config.log_level,
         application: ::Rails.application.class.parent_name.to_s,
-        appenders: config[::Rails.environment]["appenders"],
+        appenders: config[environment]["appenders"],
       )
 
       ::Rails.logger = Sapience[::Rails]
@@ -31,11 +31,20 @@ module ReevooSapience
 
     def initialize_grape
       configure(
-        log_level: config[ENV["RACK_ENV"]]["log_level"].downcase.to_sym,
-        application: config[ENV["RACK_ENV"]]["application"],
-        appenders: config[ENV["RACK_ENV"]]["appenders"],
+        log_level: config[environment]["log_level"].downcase.to_sym,
+        application: config[environment]["application"],
+        appenders: config[environment]["appenders"],
       )
       Grape::API.send(:include, Sapience::Loggable)
+    end
+
+    def environment
+      @environment ||=
+        ENV.fetch("RAILS_ENV") do
+          ENV.fetch("RACK_ENV") do
+            ::Rails.env if defined?(::Rails)
+          end
+        end
     end
 
     def config
