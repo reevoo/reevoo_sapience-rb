@@ -1,8 +1,6 @@
 require "spec_helper"
 
 describe ReevooSapience::Configuration do
-
-
   describe "#config" do
     let(:raven_dsn) { "https://raven.api" }
     let(:statsd_url) { "udp://statsdurl:3333" }
@@ -19,9 +17,9 @@ describe ReevooSapience::Configuration do
     subject { config }
 
     before do
-      allow(ENV).to receive(:fetch).with('SAPIENCE_FORMATTER').and_return(sapience_formatter)
-      allow(ENV).to receive(:fetch).with('STATSD_URL').and_return(statsd_url)
-      allow(ENV).to receive(:fetch).with('RAVEN_DSN').and_return(raven_dsn)
+      allow(ENV).to receive(:fetch).with("SAPIENCE_FORMATTER").and_return(sapience_formatter)
+      allow(ENV).to receive(:fetch).with("STATSD_URL").and_return(statsd_url)
+      allow(ENV).to receive(:fetch).with("RAVEN_DSN").and_return(raven_dsn)
     end
 
     its(["test"]) do
@@ -55,7 +53,7 @@ describe ReevooSapience::Configuration do
       subject { config["test"] }
       its(["appenders"]) do
         is_expected.to eq([
-          { "file" => { "io" => "STDOUT", "formatter" => sapience_formatter } }
+          { "file" => { "io" => "STDOUT", "formatter" => sapience_formatter } },
         ])
       end
     end
@@ -65,7 +63,7 @@ describe ReevooSapience::Configuration do
       subject { config["development"] }
       its(["appenders"]) do
         is_expected.to eq([
-          { "file" => { "io" => "STDOUT", "formatter" => sapience_formatter } }
+          { "file" => { "io" => "STDOUT", "formatter" => sapience_formatter } },
         ])
       end
     end

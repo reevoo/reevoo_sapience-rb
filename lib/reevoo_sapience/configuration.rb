@@ -29,7 +29,7 @@ module ReevooSapience
       ::Rack.logger = Sapience::Logger.logger
     end
 
-    def initialize_grape
+    def initialize_grape # rubocop:disable AbcSize
       configure(
         log_level: config[environment]["log_level"].downcase.to_sym,
         application: config[environment]["application"],
@@ -63,7 +63,7 @@ module ReevooSapience
 
     def rails_config
       return unless defined?(::Rails)
-      file = Rails.root.join('config/sapience.yml')
+      file = Rails.root.join("config/sapience.yml")
       return unless File.exist?(file)
       file
     end
