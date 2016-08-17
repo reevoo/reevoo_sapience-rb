@@ -26,7 +26,7 @@ module ReevooSapience
     end
 
     def initialize_rack
-      ::Rack.logger = Sapience::Logger.logger
+      ::Rack.logger = Sapience.logger
     end
 
     def initialize_grape # rubocop:disable AbcSize
