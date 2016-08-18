@@ -1,9 +1,17 @@
 require "reevoo_sapience/version"
 require "sapience"
-require "yaml"
-require "erb"
 
-module ReevooSapience
+module Sapience
+  module ConfigLoader
+    REEVOO_DEFAULT_FILE = "default_reevoo_sapience.yml".freeze
+    CURRENT_FOLDER      = File.realpath(File.dirname(__FILE__))
+
+    class << self
+      def config_file_path
+        return application_config_file if File.exist?(application_config_file)
+
+        File.join(CURRENT_FOLDER, REEVOO_DEFAULT_FILE)
+      end
+    end
+  end
 end
-
-require "reevoo_sapience/configuration"
