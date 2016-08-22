@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Mikael Henriksson", "Alex Malkov"]
   spec.email         = ["mika@reevoo.com", "alex.malkov@reevoo.com"]
 
-  spec.summary       = "Handles default configuration of sapience for Reevoo Ltd."
-  spec.description   = "Handles default configuration of sapience for Reevoo Ltd."
+  spec.summary       = "Centralizd sapience configuration for Reevoo Ltd."
+  spec.description   = "Centralizd sapience configuration for Reevoo Ltd. See README.md for more information"
   spec.homepage      = "https://github.com/reevoo/reevoo_sapience-rb"
   spec.license       = "MIT"
 
@@ -40,4 +40,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "simplecov-json"
   spec.add_development_dependency "codeclimate-test-reporter"
   spec.add_development_dependency "coveralls"
+  spec.add_development_dependency "gem-release"
 end
