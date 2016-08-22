@@ -16,25 +16,10 @@ And then execute:
 
 Or install it yourself as:
 
-# reevoo_sapience-rb
     $ gem install reevoo_sapience
 
 ## Usage
 
-TODO: Write usage instructions here
+There is nothing to be done here. The gem contains a reevoo specific override `sapience.yml` with the configuration the Reevoo Ltd. company uses internally. It is used to centralize logging, metrics and exception collection within our organization. 
 
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/reevoo_sapience-rb. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
-
-
-## License
-
-Standardized way of configuring sapience for the Reevoo organization
-The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+Our configuration can be found in [lib/default_reevoo_sapience.yml](https://github.com/reevoo/reevoo_sapience-rb/blob/master/lib/default_reevoo_sapience.yml).
