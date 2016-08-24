@@ -14,7 +14,7 @@ test:
   log_level: warn
   appenders:
     - file:
-        io: STDOUT
+        file_name: log/test.log
         formatter: color
 
 development:
