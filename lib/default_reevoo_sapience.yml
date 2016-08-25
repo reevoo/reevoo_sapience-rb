@@ -8,7 +8,7 @@ default:
     - statsd:
         url: udp://localhost:8125
     - sentry:
-        dsn: <%= ENV.fetch('RAVEN_DSN') %>
+        dsn: <%= ENV['RAVEN_DSN'] %>
 
 test:
   log_level: warn
@@ -20,6 +20,9 @@ test:
 development:
   log_level: debug
   appenders:
+    - file:
+        io: STDOUT
+        formatter: color
     - file:
         file_name: log/development.log
         formatter: color
@@ -33,7 +36,7 @@ production:
     - statsd:
         url: udp://localhost:8125
     - sentry:
-        dsn: <%= ENV.fetch('RAVEN_DSN') %>
+        dsn: <%= ENV['RAVEN_DSN'] %>
 
 integration:
   log_level: warn
@@ -44,7 +47,7 @@ integration:
     - statsd:
         url: udp://localhost:8125
     - sentry:
-        dsn: <%= ENV.fetch('RAVEN_DSN') %>
+        dsn: <%= ENV['RAVEN_DSN'] %>
 
 staging:
   log_level: warn
@@ -55,7 +58,7 @@ staging:
     - statsd:
         url: udp://localhost:8125
     - sentry:
-        dsn: <%= ENV.fetch('RAVEN_DSN') %>
+        dsn: <%= ENV['RAVEN_DSN'] %>
 
 ci:
   log_level: warn
@@ -66,4 +69,4 @@ ci:
     - statsd:
         url: udp://localhost:8125
     - sentry:
-        dsn: <%= ENV.fetch('RAVEN_DSN') %>
+        dsn: <%= ENV['RAVEN_DSN'] %>
