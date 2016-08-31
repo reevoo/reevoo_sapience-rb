@@ -8,7 +8,7 @@ default:
     - statsd:
         url: udp://localhost:8125
     - sentry:
-        dsn: <%= ENV['RAVEN_DSN'] %>
+        dsn: <%= ENV['SENTRY_DSN'] %>
 
 test:
   log_level: warn
@@ -36,7 +36,7 @@ production:
     - statsd:
         url: udp://localhost:8125
     - sentry:
-        dsn: <%= ENV['RAVEN_DSN'] %>
+        dsn: <%= ENV['SENTRY_DSN'] %>
 
 integration:
   log_level: warn
@@ -47,7 +47,7 @@ integration:
     - statsd:
         url: udp://localhost:8125
     - sentry:
-        dsn: <%= ENV['RAVEN_DSN'] %>
+        dsn: <%= ENV['SENTRY_DSN'] %>
 
 staging:
   log_level: warn
@@ -58,7 +58,7 @@ staging:
     - statsd:
         url: udp://localhost:8125
     - sentry:
-        dsn: <%= ENV['RAVEN_DSN'] %>
+        dsn: <%= ENV['SENTRY_DSN'] %>
 
 ci:
   log_level: warn
@@ -69,4 +69,4 @@ ci:
     - statsd:
         url: udp://localhost:8125
     - sentry:
-        dsn: <%= ENV['RAVEN_DSN'] %>
+        dsn: <%= ENV['SENTRY_DSN'] %>
