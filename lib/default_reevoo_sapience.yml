@@ -2,7 +2,7 @@
 default:
   log_level: debug
   appenders:
-    - file:
+    - stream:
         io: STDOUT
         formatter: json
     - statsd:
@@ -13,24 +13,24 @@ default:
 test:
   log_level: warn
   appenders:
-    - file:
+    - stream:
         file_name: log/test.log
         formatter: color
 
 development:
   log_level: debug
   appenders:
-    - file:
+    - stream:
         io: STDOUT
         formatter: color
-    - file:
+    - stream:
         file_name: log/development.log
         formatter: color
 
 production:
   log_level: warn
   appenders:
-    - file:
+    - stream:
         io: STDOUT
         formatter: json
     - statsd:
@@ -41,7 +41,7 @@ production:
 integration:
   log_level: warn
   appenders:
-    - file:
+    - stream:
         io: STDOUT
         formatter: json
     - statsd:
@@ -52,7 +52,7 @@ integration:
 staging:
   log_level: warn
   appenders:
-    - file:
+    - stream:
         io: STDOUT
         formatter: json
     - statsd:
@@ -63,7 +63,7 @@ staging:
 ci:
   log_level: warn
   appenders:
-    - file:
+    - stream:
         io: STDOUT
         formatter: json
     - statsd:
