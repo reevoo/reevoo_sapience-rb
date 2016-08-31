@@ -5,7 +5,7 @@ default:
     - stream:
         io: STDOUT
         formatter: json
-    - statsd:
+    - datadog:
         url: udp://localhost:8125
     - sentry:
         dsn: <%= ENV['SENTRY_DSN'] %>
@@ -33,7 +33,7 @@ production:
     - stream:
         io: STDOUT
         formatter: json
-    - statsd:
+    - datadog:
         url: udp://localhost:8125
     - sentry:
         dsn: <%= ENV['SENTRY_DSN'] %>
@@ -44,7 +44,7 @@ integration:
     - stream:
         io: STDOUT
         formatter: json
-    - statsd:
+    - datadog:
         url: udp://localhost:8125
     - sentry:
         dsn: <%= ENV['SENTRY_DSN'] %>
@@ -55,7 +55,7 @@ staging:
     - stream:
         io: STDOUT
         formatter: json
-    - statsd:
+    - datadog:
         url: udp://localhost:8125
     - sentry:
         dsn: <%= ENV['SENTRY_DSN'] %>
@@ -66,7 +66,7 @@ ci:
     - stream:
         io: STDOUT
         formatter: json
-    - statsd:
+    - datadog:
         url: udp://localhost:8125
     - sentry:
         dsn: <%= ENV['SENTRY_DSN'] %>
