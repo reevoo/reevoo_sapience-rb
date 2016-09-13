@@ -5,13 +5,6 @@ default:
     - stream:
         io: STDOUT
         formatter: json
-    - stream:
-        file_name: log/default.log
-        formatter: color
-    - datadog:
-        url: udp://localhost:8125
-    - sentry:
-        dsn: <%= ENV['SENTRY_DSN'] %>
 
 test:
   log_level: warn
@@ -41,29 +34,12 @@ production:
     - sentry:
         dsn: <%= ENV['SENTRY_DSN'] %>
 
-integration:
-  log_level: warn
-  appenders:
-    - stream:
-        io: STDOUT
-        formatter: json
-    - stream:
-        file_name: log/integration.log
-        formatter: color
-    - datadog:
-        url: udp://localhost:8125
-    - sentry:
-        dsn: <%= ENV['SENTRY_DSN'] %>
-
 staging:
   log_level: info
   appenders:
     - stream:
         io: STDOUT
         formatter: json
-    - stream:
-        file_name: log/staging.log
-        formatter: color
     - datadog:
         url: udp://localhost:8125
     - sentry:
@@ -74,11 +50,4 @@ ci:
   appenders:
     - stream:
         io: STDOUT
-        formatter: json
-    - stream:
-        file_name: log/ci.log
         formatter: color
-    - datadog:
-        url: udp://localhost:8125
-    - sentry:
-        dsn: <%= ENV['SENTRY_DSN'] %>
