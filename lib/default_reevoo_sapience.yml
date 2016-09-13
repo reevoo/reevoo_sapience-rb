@@ -31,7 +31,7 @@ development:
         formatter: color
 
 production:
-  log_level: warn
+  log_level: info
   appenders:
     - stream:
         io: STDOUT
@@ -56,7 +56,7 @@ integration:
         dsn: <%= ENV['SENTRY_DSN'] %>
 
 staging:
-  log_level: warn
+  log_level: info
   appenders:
     - stream:
         io: STDOUT
