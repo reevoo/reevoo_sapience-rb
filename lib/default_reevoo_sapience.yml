@@ -5,6 +5,9 @@ default:
     - stream:
         io: STDOUT
         formatter: json
+    - stream:
+        file_name: log/default.log
+        formatter: color
     - datadog:
         url: udp://localhost:8125
     - sentry:
@@ -44,6 +47,9 @@ integration:
     - stream:
         io: STDOUT
         formatter: json
+    - stream:
+        file_name: log/integration.log
+        formatter: color
     - datadog:
         url: udp://localhost:8125
     - sentry:
@@ -55,6 +61,9 @@ staging:
     - stream:
         io: STDOUT
         formatter: json
+    - stream:
+        file_name: log/staging.log
+        formatter: color
     - datadog:
         url: udp://localhost:8125
     - sentry:
@@ -66,6 +75,9 @@ ci:
     - stream:
         io: STDOUT
         formatter: json
+    - stream:
+        file_name: log/ci.log
+        formatter: color
     - datadog:
         url: udp://localhost:8125
     - sentry:
