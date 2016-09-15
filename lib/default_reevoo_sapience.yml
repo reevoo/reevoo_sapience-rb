@@ -30,7 +30,7 @@ production:
         io: STDOUT
         formatter: json
     - datadog:
-        url: udp://localhost:8125
+        url: <%= ENV.fetch("STATSD_URL", "udp://localhost:8125") %>
     - sentry:
         dsn: <%= ENV['SENTRY_DSN'] %>
 
@@ -41,7 +41,7 @@ staging:
         io: STDOUT
         formatter: json
     - datadog:
-        url: udp://localhost:8125
+        url: <%= ENV.fetch("STATSD_URL", "udp://localhost:8125") %>
     - sentry:
         dsn: <%= ENV['SENTRY_DSN'] %>
 
