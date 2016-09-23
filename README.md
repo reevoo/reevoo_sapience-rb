@@ -7,7 +7,7 @@
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'reevoo_sapience-rb'
+gem 'reevoo_sapience'
 ```
 
 And then execute:
@@ -20,6 +20,6 @@ Or install it yourself as:
 
 ## Usage
 
-There is nothing to be done here. The gem contains a reevoo specific override `sapience.yml` with the configuration the Reevoo Ltd. company uses internally. It is used to centralize logging, metrics and exception collection within our organization. 
+There is nothing to be done here. The gem contains a reevoo specific override `sapience.yml` with the configuration the Reevoo Ltd. company uses internally. It is used to centralize logging, metrics and exception collection within our organization.
 
 Our configuration can be found in [lib/default_reevoo_sapience.yml](https://github.com/reevoo/reevoo_sapience-rb/blob/master/lib/default_reevoo_sapience.yml).
