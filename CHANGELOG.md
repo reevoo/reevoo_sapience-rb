@@ -1,3 +1,8 @@
+## v0.2.8
+
+- Always add a datadog appender
+- Allow override of default config by placing a config/sapience.yml in the applications root directory
+
 ## v0.1.3
 
 - Move dependencies to reevoo_sapience. This is where we know what dependencies we have so declare those dependencies for the gem.

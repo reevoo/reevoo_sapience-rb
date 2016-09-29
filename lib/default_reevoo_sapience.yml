@@ -2,6 +2,8 @@
 default:
   log_level: debug
   appenders:
+    - datadog:
+        url: <%= ENV.fetch("STATSD_URL", "udp://localhost:8125") %>
     - stream:
         io: STDOUT
         formatter: json
@@ -9,6 +11,8 @@ default:
 test:
   log_level: warn
   appenders:
+    - datadog:
+        url: <%= ENV.fetch("STATSD_URL", "udp://localhost:8125") %>
     - stream:
         file_name: log/test.log
         formatter: color
@@ -16,6 +20,8 @@ test:
 development:
   log_level: debug
   appenders:
+    - datadog:
+        url: <%= ENV.fetch("STATSD_URL", "udp://localhost:8125") %>
     - stream:
         io: STDOUT
         formatter: color
@@ -48,6 +54,8 @@ staging:
 ci:
   log_level: warn
   appenders:
+    - datadog:
+        url: <%= ENV.fetch("STATSD_URL", "udp://localhost:8125") %>
     - stream:
         io: STDOUT
         formatter: color

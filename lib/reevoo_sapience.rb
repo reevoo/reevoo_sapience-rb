@@ -8,8 +8,6 @@ module Sapience
 
     class << self
       def config_file_path
-        return application_config_file if File.exist?(application_config_file)
-
         File.join(CURRENT_FOLDER, REEVOO_DEFAULT_FILE)
       end
     end
