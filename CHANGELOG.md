@@ -1,3 +1,8 @@
+## v1.0.0
+
+- Force Sapience version >= 2.0.0
+- 
+
 ## v0.2.8
 
 - Always add a datadog appender
