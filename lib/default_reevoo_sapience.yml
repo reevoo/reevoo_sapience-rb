@@ -1,27 +1,30 @@
 ---
 default:
   log_level: debug
+  metrics:
+    datadog:
+            url: <%= ENV.fetch("STATSD_URL", "udp://localhost:8125") %>
   appenders:
-    - datadog:
-        url: <%= ENV.fetch("STATSD_URL", "udp://localhost:8125") %>
     - stream:
         io: STDOUT
         formatter: json
 
 test:
   log_level: warn
+  metrics:
+    datadog:
+            url: <%= ENV.fetch("STATSD_URL", "udp://localhost:8125") %>
   appenders:
-    - datadog:
-        url: <%= ENV.fetch("STATSD_URL", "udp://localhost:8125") %>
     - stream:
         file_name: log/test.log
         formatter: color
 
 development:
   log_level: debug
+  metrics:
+    datadog:
+      url: <%= ENV.fetch("STATSD_URL", "udp://localhost:8125") %>
   appenders:
-    - datadog:
-        url: <%= ENV.fetch("STATSD_URL", "udp://localhost:8125") %>
     - stream:
         io: STDOUT
         formatter: color
@@ -31,31 +34,36 @@ development:
 
 production:
   log_level: info
+  error_handler:
+    sentry:
+      dsn: <%= ENV['SENTRY_DSN'] %>
+  metrics:
+    datadog:
+      url: <%= ENV.fetch("STATSD_URL", "udp://localhost:8125") %>
   appenders:
     - stream:
         io: STDOUT
         formatter: json
-    - datadog:
-        url: <%= ENV.fetch("STATSD_URL", "udp://localhost:8125") %>
-    - sentry:
-        dsn: <%= ENV['SENTRY_DSN'] %>
 
 staging:
   log_level: info
+  error_handler:
+    sentry:
+      dsn: <%= ENV['SENTRY_DSN'] %>
+  metrics:
+    datadog:
+      url: <%= ENV.fetch("STATSD_URL", "udp://localhost:8125") %>
   appenders:
     - stream:
         io: STDOUT
         formatter: json
-    - datadog:
-        url: <%= ENV.fetch("STATSD_URL", "udp://localhost:8125") %>
-    - sentry:
-        dsn: <%= ENV['SENTRY_DSN'] %>
 
 ci:
   log_level: warn
+  metrics:
+    datadog:
+      url: <%= ENV.fetch("STATSD_URL", "udp://localhost:8125") %>
   appenders:
-    - datadog:
-        url: <%= ENV.fetch("STATSD_URL", "udp://localhost:8125") %>
     - stream:
         io: STDOUT
         formatter: color
