@@ -1,3 +1,8 @@
+## v1.0.2
+
+- Bump dogstatsd-ruby gem to version "~> 2.2"
+- Bump sentry-raven gem to version "~> 2.3"
+
 ## v1.0.1
 
 - Bump sentry-raven gem to version "~> 2.2.0"
