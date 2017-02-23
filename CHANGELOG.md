@@ -1,7 +1,10 @@
+## v1.0.1
+
+- Bump sentry-raven gem to version "~> 2.2.0"
+
 ## v1.0.0
 
 - Force Sapience version >= 2.0.0
-- 
 
 ## v0.2.8
 
