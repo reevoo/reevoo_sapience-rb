@@ -1,3 +1,6 @@
+## v2.1
+- Force sapience gem to version >= 2.1
+
 ## v1.0.2
 
 - Bump dogstatsd-ruby gem to version "~> 2.2"
