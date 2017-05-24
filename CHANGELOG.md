@@ -1,3 +1,6 @@
+## v2.2
+- Force sapience version >= 2.2
+
 ## v2.1
 - Force sapience gem to version >= 2.1
 
