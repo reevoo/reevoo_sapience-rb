@@ -3,7 +3,7 @@ default:
   log_level: debug
   metrics:
     datadog:
-            url: <%= ENV.fetch("STATSD_URL", "udp://localhost:8125") %>
+      url: <%= ENV.fetch("STATSD_URL", "udp://localhost:8125") %>
   appenders:
     - stream:
         io: STDOUT
@@ -13,7 +13,7 @@ test:
   log_level: warn
   metrics:
     datadog:
-            url: <%= ENV.fetch("STATSD_URL", "udp://localhost:8125") %>
+      url: <%= ENV.fetch("STATSD_URL", "udp://localhost:8125") %>
   appenders:
     - stream:
         file_name: log/test.log

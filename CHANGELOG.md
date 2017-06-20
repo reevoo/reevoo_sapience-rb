@@ -1,3 +1,6 @@
+## v2.3
+- Fix yaml indentation
+
 ## v2.2
 - Force sapience version >= 2.2
 
