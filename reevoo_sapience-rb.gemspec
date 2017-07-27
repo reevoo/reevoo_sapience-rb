@@ -29,7 +29,7 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "sapience", "~> 2.2"
   spec.add_dependency "dogstatsd-ruby", "~> 2.2"
-  spec.add_dependency "sentry-raven", "~> 2.3"
+  spec.add_dependency "sentry-raven", "~> 2.6"
 
   spec.add_development_dependency "bundler", "~> 1.12"
   spec.add_development_dependency "rake", "~> 10.0"
