@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 require "bundler/gem_tasks"
 require "rspec/core/rake_task"
 
@@ -10,4 +11,4 @@ begin
   end
 rescue LoadError # rubocop:disable Lint/HandleExceptions
 end
-task default: [:reevocop, :spec]
+task default: %i[reevoocop spec]

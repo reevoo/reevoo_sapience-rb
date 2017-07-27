@@ -1,3 +1,6 @@
+## v2.3.1
+- Bump sentry-raven gem to "~> 2.6"
+
 ## v2.3
 - Fix yaml indentation
 

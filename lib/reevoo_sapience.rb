@@ -1,9 +1,10 @@
+# frozen_string_literal: true
 require "reevoo_sapience/version"
 require "sapience"
 
 module Sapience
   module ConfigLoader
-    REEVOO_DEFAULT_FILE = "default_reevoo_sapience.yml".freeze
+    REEVOO_DEFAULT_FILE = "default_reevoo_sapience.yml"
     CURRENT_FOLDER      = File.realpath(File.dirname(__FILE__))
 
     class << self
