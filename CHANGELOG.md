@@ -1,3 +1,9 @@
+## v2.3.2
+- Pin sentry-raven gem to "~> 2.6.x"
+  There was an issue with sentry-raven@2.7.0 so we are restricting it to the 2.6.x
+  range.
+  https://github.com/getsentry/raven-ruby/issues/773
+
 ## v2.3.1
 - Bump sentry-raven gem to "~> 2.6"
 
