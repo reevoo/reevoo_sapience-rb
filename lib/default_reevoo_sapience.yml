@@ -47,9 +47,6 @@ production:
 
 staging:
   log_level: info
-  error_handler:
-    sentry:
-      dsn: <%= ENV['SENTRY_DSN'] %>
   metrics:
     datadog:
       url: <%= ENV.fetch("STATSD_URL", "udp://localhost:8125") %>
