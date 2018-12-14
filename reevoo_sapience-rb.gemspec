@@ -1,6 +1,5 @@
-# coding: utf-8
 # frozen_string_literal: true
-lib = File.expand_path("../lib", __FILE__)
+lib = File.expand_path("lib", __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "reevoo_sapience/version"
 
@@ -28,20 +27,20 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(/^exe\//) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "sapience", "~> 2.7"
   spec.add_dependency "dogstatsd-ruby", "~> 2.2"
+  spec.add_dependency "sapience", "~> 2.7"
   spec.add_dependency "sentry-raven", "~> 2.6"
 
   spec.add_development_dependency "bundler", "~> 1.12"
-  spec.add_development_dependency "rake", "~> 10.0"
-  spec.add_development_dependency "rspec", "~> 3.0"
-  spec.add_development_dependency "rspec-its"
-  spec.add_development_dependency "pry-nav"
-  spec.add_development_dependency "reevoocop"
-  spec.add_development_dependency "fuubar"
-  spec.add_development_dependency "simplecov"
-  spec.add_development_dependency "simplecov-json"
   spec.add_development_dependency "codeclimate-test-reporter"
   spec.add_development_dependency "coveralls"
+  spec.add_development_dependency "fuubar"
   spec.add_development_dependency "gem-release"
+  spec.add_development_dependency "pry-nav"
+  spec.add_development_dependency "rake", "~> 10.0"
+  spec.add_development_dependency "reevoocop"
+  spec.add_development_dependency "rspec", "~> 3.0"
+  spec.add_development_dependency "rspec-its"
+  spec.add_development_dependency "simplecov"
+  spec.add_development_dependency "simplecov-json"
 end

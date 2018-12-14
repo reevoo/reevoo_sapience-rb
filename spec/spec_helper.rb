@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 require "simplecov"
 
-$LOAD_PATH.unshift File.expand_path("../../lib", __FILE__)
+$LOAD_PATH.unshift File.expand_path("../lib", __dir__)
 require "reevoo_sapience"
 require "rspec/its"
 require "pry-nav"
