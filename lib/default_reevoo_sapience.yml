@@ -34,6 +34,8 @@ development:
 
 production:
   log_level: info
+  silent_rails: true
+  silent_active_record: true
   error_handler:
     sentry:
       dsn: <%= ENV['SENTRY_DSN'] %>
@@ -47,6 +49,8 @@ production:
 
 staging:
   log_level: info
+  silent_rails: true
+  silent_active_record: true
   metrics:
     datadog:
       url: <%= ENV.fetch("STATSD_URL", "udp://localhost:8125") %>
