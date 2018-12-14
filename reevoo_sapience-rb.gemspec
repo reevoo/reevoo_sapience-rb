@@ -28,7 +28,7 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(/^exe\//) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "sapience", "~> 2.2"
+  spec.add_dependency "sapience", "~> 2.7"
   spec.add_dependency "dogstatsd-ruby", "~> 2.2"
   spec.add_dependency "sentry-raven", "~> 2.6"
 
