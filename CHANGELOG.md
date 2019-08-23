@@ -1,3 +1,6 @@
+## v2.5
+- Bump sapience-rb gem to "~> 2.9"
+
 ## v2.3.1
 - Bump sentry-raven gem to "~> 2.6"
 
