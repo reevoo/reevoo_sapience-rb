@@ -15,7 +15,7 @@ env: STYLE=false
 matrix:
   fast_finish: true
   include:
-    - rvm: 2.3.1
+    - rvm: 2.5.3
       env: STYLE=true
 notifications:
   slack:
