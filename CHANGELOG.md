@@ -1,3 +1,8 @@
+## v2.6
+- Add silent_rack attribute to default config
+- Use default bundler gem
+- Update travis instructions
+
 ## v2.5
 - Bump sapience-rb gem to "~> 2.9"
 
