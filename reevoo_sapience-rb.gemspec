@@ -31,7 +31,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency "sapience", "~> 2.9"
   spec.add_dependency "sentry-raven", "~> 2.6"
 
-  spec.add_development_dependency "bundler", "~> 1.12"
+  spec.add_development_dependency "bundler"
   spec.add_development_dependency "codeclimate-test-reporter"
   spec.add_development_dependency "coveralls"
   spec.add_development_dependency "fuubar"
