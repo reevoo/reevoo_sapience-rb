@@ -35,6 +35,7 @@ development:
 production:
   log_level: info
   silent_rails: true
+  silent_rack: true
   silent_active_record: true
   error_handler:
     sentry:
@@ -50,6 +51,7 @@ production:
 staging:
   log_level: info
   silent_rails: true
+  silent_rack: true
   silent_active_record: true
   metrics:
     datadog:
