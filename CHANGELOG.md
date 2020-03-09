@@ -1,3 +1,7 @@
+## v2.6
+- Bump sapience-rb gem to "~> 2.11"
+- Disable metrics from ActionController by default
+
 ## v2.5
 - Bump sapience-rb gem to "~> 2.9"
 
