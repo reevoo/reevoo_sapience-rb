@@ -1,3 +1,6 @@
+## v2.7
+- Bump sapience-rb gem to "~> 2.12" (log hooks)
+
 ## v2.6
 - Bump sapience-rb gem to "~> 2.11"
 - Disable metrics from ActionController by default
