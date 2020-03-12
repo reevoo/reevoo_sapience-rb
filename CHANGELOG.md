@@ -1,3 +1,6 @@
+## v2.8
+- Bump sapience-rb gem to "~> 2.13" (config option for grape metrics)
+
 ## v2.7
 - Bump sapience-rb gem to "~> 2.12" (log hooks)
 

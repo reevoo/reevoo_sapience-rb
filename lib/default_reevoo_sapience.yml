@@ -38,6 +38,7 @@ production:
   silent_rack: true
   silent_active_record: true
   rails_ac_metrics: false
+  grape_metrics: false
   error_handler:
     sentry:
       dsn: <%= ENV['SENTRY_DSN'] %>
@@ -55,6 +56,7 @@ staging:
   silent_rack: true
   silent_active_record: true
   rails_ac_metrics: false
+  grape_metrics: false
   metrics:
     datadog:
       url: <%= ENV.fetch("STATSD_URL", "udp://localhost:8125") %>
