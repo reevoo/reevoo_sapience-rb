@@ -63,7 +63,7 @@ staging:
   appenders:
     - stream:
         io: STDOUT
-        formatter: json
+        formatter: color
 
 ci:
   log_level: warn
