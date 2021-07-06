@@ -1,3 +1,10 @@
+## v3.0
+- Update dependencies:
+  - dogstatsd-ruby -> 5.2.0
+  - sapience -> 3.0
+  - sentry-raven -> 3.1.2
+  - rspec -> 3.10.0
+
 ## v2.8
 - Bump sapience-rb gem to "~> 2.13" (config option for grape metrics)
 
